@@ -1,0 +1,99 @@
+<!-- 
+
+   ____               _                ____ _                      
+  / ___| ___  _ __ __| | ___  _ __    / ___| |__   ___ _ __   __ _ 
+ | |  _ / _ \| '__/ _` |/ _ \| '_ \  | |   | '_ \ / _ \ '_ \ / _` |
+ | |_| | (_) | | | (_| | (_) | | | | | |___| | | |  __/ | | | (_| |
+  \____|\___/|_|  \__,_|\___/|_| |_|  \____|_| |_|\___|_| |_|\__, |
+                                                             |___/ 
+                                                             
+                                                             
+You can read the source, or you can just get a copy ;) -- https://github.com/gordosan/Gordoncheng.com                                                     
+                                            
+                                                             
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the official website of Gordon "Gordo" Cheng - Web Developer/Designer">
+    <meta name="author" content="Gordon Cheng">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Gordon Cheng</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">    
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Gordon Cheng</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li id = "about" class="active"><a href="#About" onClick="aboutSelect()">About</a></li>
+                  <li id = "quotes"><a href="#Quotes" onClick="quotesSelect()">Quotes</a></li>
+                  <li id = "contact"><a href="#Contact" onClick="contactSelect()">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>          
+          <div class="inner cover" id="data_placeholder">
+      	    <div id = "data"></div>
+          </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>© 
+				<script type="text/javascript">
+                    var dteNow = new Date();
+                    var intYear = dteNow.getFullYear();
+                    document.write(intYear);
+                </script>
+              Gordon Cheng</p>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/myscripts.js"></script>
+    
+    <!-- Load content based on anchor -->    
+    <script>
+  if(window.location.hash) {
+      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+	  
+	  if(hash.toLowerCase() == "about"){
+		 aboutSelect()
+	  }
+	  if(hash.toLowerCase() == "quotes"){
+		  quotesSelect();
+	  }
+	   if(hash.toLowerCase() == "contact"){
+		  contactSelect();
+	  }	    
+	  
+	  else {
+      $( "#data" ).load( "content/home.html" );
+	  }
+	  
+      // ---hash found above ---  if not then just load about
+  } else {
+      $( "#data" ).load( "content/home.html" );
+  }</script>
+  
+  </body>
+</html>
