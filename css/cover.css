@@ -71,6 +71,10 @@ body {
   padding: 30px;
 }
 
+.disableclick {
+  pointer-events: none;
+}
+
 
 /*
  * Header

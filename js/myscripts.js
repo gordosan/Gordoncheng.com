@@ -2,8 +2,13 @@
 
 function quotesSelect() {
   $( "#quotes" ).addClass("active");
+  $( "#quotes" ).addClass("disableclick");
+  
   $( "#about").removeClass("active");
   $( "#contact" ).removeClass("active");
+  $( "#about").removeClass("disableclick");
+  $( "#contact" ).removeClass("disableclick");
+  
   $( "#data").remove();
   $('#data_placeholder').append("<div id = 'data' class = 'animated zoomIn'></div>");
   $( "#data" ).load( "content/Quotes.html" );
@@ -11,8 +16,13 @@ function quotesSelect() {
 
 function aboutSelect() {
 	$( "#about" ).addClass("active");
+	$( "#about" ).addClass("disableclick");
+	
     $( "#quotes").removeClass("active");
 	$( "#contact" ).removeClass("active");
+    $( "#quotes").removeClass("disableclick");
+    $( "#contact" ).removeClass("disableclick");
+	
 	$( "#data").remove();
     $('#data_placeholder').append("<div id = 'data' class = 'animated zoomIn'></div>");
     $( "#data" ).load( "content/home.html" );
@@ -20,8 +30,11 @@ function aboutSelect() {
 
 function contactSelect() {
 	$( "#contact" ).addClass("active");
+	$( "#contact" ).addClass("disableclick");
     $( "#quotes").removeClass("active");
 	$( "#about").removeClass("active");
+	$( "#about").removeClass("disableclick");
+    $( "#quotes" ).removeClass("disableclick");
 	$( "#data").remove();
     $('#data_placeholder').append("<div id = 'data' class = 'animated flipInX'></div>");
     $( "#data" ).load( "content/contact.html" );
