@@ -5,7 +5,7 @@ function quotesSelect() {
   $( "#about").removeClass("active");
   $( "#contact" ).removeClass("active");
   $( "#data").remove();
-  $('#data_placeholder').append("<div id = 'data' class = 'animated fadeIn'></div>");
+  $('#data_placeholder').append("<div id = 'data' class = 'animated zoomIn'></div>");
   $( "#data" ).load( "content/Quotes.html" );
 }
 
@@ -14,7 +14,7 @@ function aboutSelect() {
     $( "#quotes").removeClass("active");
 	$( "#contact" ).removeClass("active");
 	$( "#data").remove();
-    $('#data_placeholder').append("<div id = 'data' class = 'animated fadeIn'></div>");
+    $('#data_placeholder').append("<div id = 'data' class = 'animated zoomIn'></div>");
     $( "#data" ).load( "content/home.html" );
 }
 
@@ -23,7 +23,7 @@ function contactSelect() {
     $( "#quotes").removeClass("active");
 	$( "#about").removeClass("active");
 	$( "#data").remove();
-    $('#data_placeholder').append("<div id = 'data' class = 'animated fadeIn'></div>");
+    $('#data_placeholder').append("<div id = 'data' class = 'animated flipInX'></div>");
     $( "#data" ).load( "content/contact.html" );
 }
 
@@ -50,7 +50,10 @@ function loadpage(hash){
 	  }	    
 	  
 	  else {
-      $( "#data" ).load( "content/error.html" );
+    $( "#contact" ).removeClass("active");
+    $( "#quotes").removeClass("active");
+	$( "#about").removeClass("active");
+    $( "#data" ).load( "content/error.html" );
 	  }
   
 }
