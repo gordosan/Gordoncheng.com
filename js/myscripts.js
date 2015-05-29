@@ -27,3 +27,36 @@ function contactSelect() {
     $( "#data" ).load( "content/contact.html" );
 }
 
+function gethash(){
+	  if(window.location.hash) {
+		  var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		  loadpage(hash);	  
+		  // ---hash found above ---  if not then just load default
+	  } else {
+		  $( "#data" ).load( "content/home.html" );
+	  }	
+}
+
+
+function loadpage(hash){ 
+	  if(hash.toLowerCase() == "about"){
+		 aboutSelect();
+	  }
+	  else if(hash.toLowerCase() == "quotes"){
+		  quotesSelect();
+	  }
+	  else if(hash.toLowerCase() == "contact"){
+		  contactSelect();
+	  }	    
+	  
+	  else {
+      $( "#data" ).load( "content/error.html" );
+	  }
+  
+}
+
+function footer(){
+     var dteNow = new Date();
+     var intYear = dteNow.getFullYear();
+     document.write("<p>© " + intYear +  " Gordon Cheng</p>");	
+}
