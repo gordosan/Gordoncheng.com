@@ -1,4 +1,8 @@
 // JavaScript Document
+    $( window ).load(function() {
+  $(".overlay").hide();
+});
+
 
 function quotesSelect() {
   $( "#quotes" ).addClass("active");
