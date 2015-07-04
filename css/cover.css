@@ -33,11 +33,11 @@ a:hover {
  */
 
 .masthead{
-  background-color: black;
+   background: rgba(0, 0, 0, 0.5);
 }
 
 .mastfoot{
- background-color: black;
+
  bottom: 0px;
  position: absolute;
  width: 100%;
