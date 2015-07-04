@@ -12,6 +12,10 @@ a:hover {
   color: #CF3;
 }
 
+  #data{
+    margin-top: 100px;
+  }
+
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -23,14 +27,6 @@ a:hover {
 }
 
 
-/*
- * Base structure
-   background: -webkit-linear-gradient(#00376F, #369 50%, #00376F 100%); 
-  background: -o-linear-gradient(#00376F, #369  50%, #00376F 100%); 
-  background: -moz-linear-gradient(#00376F, #369  50%, #00376F 100%); 
-  background: linear-gradient(#00376F, #369 50%, #00376F 100%); 
- 
- */
 
 .masthead{
    background: rgba(0, 0, 0, 0.5);
@@ -49,11 +45,6 @@ html,
 body {
   height: 100%;
  
-    /*background: -webkit-radial-gradient(#00376F 15%, #369); 
-    background: -o-radial-gradient(#00376F 15%, #369); 
-    background: -moz-radial-gradient(#00376F 15%, #369); 
-    background: radial-gradient(#00376F 15%, #369);*/
-
     background-image: url("../assets/background.jpg");
      background-size: cover;
      background-repeat: no-repeat;
@@ -142,6 +133,8 @@ body {
   .masthead-nav {
     float: right;
   }
+
+
 }
 
 
@@ -192,6 +185,8 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
+
 }
 
 
@@ -3430,6 +3425,7 @@ Copyright (c) 2015 Daniel Eden
   bottom: 0;
   right: 0;
 }
+
 @-webkit-keyframes load3 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -3459,6 +3455,7 @@ Copyright (c) 2015 Daniel Eden
   .mastfoot,
   .cover-container {
     width: 100%;
+
   }
 }
 
