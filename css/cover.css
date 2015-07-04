@@ -32,20 +32,41 @@ a:hover {
  
  */
 
+.masthead{
+  background-color: black;
+}
+
+.mastfoot{
+ background-color: black;
+ bottom: 0px;
+ position: absolute;
+ width: 100%;
+
+}
+
+
 html,
 body {
   height: 100%;
  
-    background: -webkit-radial-gradient(#00376F 15%, #369); /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(#00376F 15%, #369); /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(#00376F 15%, #369); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(#00376F 15%, #369); /* Standard syntax (must be last) */
+    /*background: -webkit-radial-gradient(#00376F 15%, #369); 
+    background: -o-radial-gradient(#00376F 15%, #369); 
+    background: -moz-radial-gradient(#00376F 15%, #369); 
+    background: radial-gradient(#00376F 15%, #369);*/
+
+    background-image: url("../assets/background.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+
+
+
   
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -3360,6 +3381,6 @@ Copyright (c) 2015 Daniel Eden
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 100%;
   }
 }

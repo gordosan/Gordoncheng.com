@@ -36,7 +36,7 @@ function contactSelect() {
 	$( "#about").removeClass("disableclick");
     $( "#quotes" ).removeClass("disableclick");
 	$( "#data").remove();
-    $('#data_placeholder').append("<div id = 'data' class = 'animated flipInX'></div>");
+    $('#data_placeholder').append("<div id = 'data' class = 'animated zoomIn'></div>");
     $( "#data" ).load( "content/contact.html" );
 }
 
