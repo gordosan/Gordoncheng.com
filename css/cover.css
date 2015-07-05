@@ -9,7 +9,7 @@
 a,
 a:focus,
 a:hover {
-  color: #CF3;
+  color: #FFFF00;
 }
 
 
@@ -23,7 +23,7 @@ a:hover {
   border: 1px solid #fff;
 }
 
-.masthead{
+.masthead, .masthead-nav{
    background: rgba(0, 0, 0, 0.3);
 }
 
@@ -155,15 +155,10 @@ body {
   }
   .masthead-nav {
     float: right;
+    padding-right: 50px;
   }
 
-  html,body{
-    min-height: 100%;
-  }
 
-  #data{
-  padding-top: 50px;
-}
 
 
 }
@@ -199,6 +194,7 @@ body {
     position: fixed;
     top: 0;
   }
+
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;

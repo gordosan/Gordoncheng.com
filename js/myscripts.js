@@ -59,9 +59,6 @@ function loadpage(hash){
 	  if(hash.toLowerCase() == "about"){
 		 aboutSelect();
 	  }
-	  else if(hash.toLowerCase() == "quotes"){
-		  quotesSelect();
-	  }
 	  else if(hash.toLowerCase() == "contact"){
 		  contactSelect();
 	  }	    
@@ -80,3 +77,23 @@ function footer(){
      var intYear = dteNow.getFullYear();
      document.write("<p>© " + intYear +  " Gordon Cheng</p>");	
 }
+
+//hide header when scrolling down
+
+
+	var mywindow = $(window);
+	var mypos = mywindow.scrollTop();
+	var up = false;
+	var newscroll;
+	mywindow.scroll(function () {
+	    newscroll = mywindow.scrollTop();
+	    if (newscroll > mypos && !up) {
+	        $('.masthead').hide();
+	        up = !up;
+	        console.log(up);
+	    } else if(newscroll < mypos && up &&newscroll ==0 ) {
+	        $('.masthead').stop().slideToggle();
+	        up = !up;
+	    }
+	    mypos = newscroll;
+	});
