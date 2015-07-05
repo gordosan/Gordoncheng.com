@@ -12,10 +12,6 @@ a:hover {
   color: #CF3;
 }
 
-#data{
-    margin-top: 100px;
-}
-
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -32,13 +28,19 @@ a:hover {
 
 .mastfoot{
  bottom: 0px;
- position: absolute;
+ position: static;
  width: 100%;
 }
 
 @keyframes spinCycle {
-    from { -webkit-filter: hue-rotate(0deg)    }
-    to   { -webkit-filter: hue-rotate(360deg) }
+    from { 
+      -webkit-filter: hue-rotate(0deg);
+      filter: hue-rotate(0deg);
+        }
+    to   {
+     -webkit-filter: hue-rotate(360deg);
+     filter: hue-rotate(360deg);
+    }
 }
 
 html,
@@ -47,11 +49,16 @@ body {
   background-image: url("../assets/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-    -webkit-animation-name: spinCycle;
-   -webkit-animation-duration: 40s;
-   -webkit-animation-iteration-count: infinite;
-   -webkit-animation-delay: 0s; 
-   -webkit-animation-timing-function: linear;
+  -webkit-animation-name: spinCycle;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s; 
+  -webkit-animation-timing-function: linear;
+   animation-name: spinCycle;
+   animation-duration: 40s;
+   animation-iteration-count: infinite;
+   animation-delay: 0s; 
+   animation-timing-function: linear;
  
 }
 
